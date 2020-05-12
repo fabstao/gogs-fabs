@@ -1,0 +1,8 @@
+                  volumeMounts:
+                    - mountPath: /home/gogs
+                      name: gogs-volume-1
+
+         volumes:
+           - name: gogs-volume-1
+             persistentVolumeClaim:
+               claimName: gogsdemor2pvc
