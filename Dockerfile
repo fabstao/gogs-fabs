@@ -1,8 +1,5 @@
 FROM quay.io/fabstao/centos8:2
-MAINTAINER Fabian Salamanca <fsalamanca@ibm.com>
-
-LABEL GOGS Git Repository Image Container based on CentOS 8, could be used for RHEL 8
-LABEL Should be used with SQLite 3 only
+#MAINTAINER Fabian Salamanca <fsalamanca@ibm.com>
 
 ENV GDIR /home/gogs
 
