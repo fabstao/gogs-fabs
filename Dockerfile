@@ -11,7 +11,7 @@ ARG GID=11000
 RUN dnf -y upgrade
 RUN dnf -y install git curl wget gzip
 RUN mkdir $GDIR 
-RUN groupadd -g $GIS $UNAME
+RUN groupadd -g $GID $UNAME
 RUN useradd -u $UID -d $GDIR $UNAME && chown -R gogs $GDIR
 USER $UNAME
 WORKDIR $GDIR
