@@ -8,7 +8,8 @@ ARG GDIR=/home/gogs
 
 RUN dnf -y upgrade
 RUN dnf -y install git curl wget gzip
-RUN useradd -m -d $GDIR gogs
+RUN mkdir $GDIR 
+RUN useradd -d $GDIR gogs && chown -R gogs /home/gogs
 RUN chown -R gogs /home/gogs
 USER gogs
 WORKDIR $GDIR
