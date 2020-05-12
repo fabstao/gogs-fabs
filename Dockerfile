@@ -15,7 +15,7 @@ RUN mkdir $GDIR
 RUN echo $UNAME
 RUN useradd -u $UID -d $GDIR $UNAME && chown -R $UNAME $GDIR
 RUN chmod -R 1777 $GDIR
-USER $UNAME
+USER root
 WORKDIR $GDIR
 RUN cd $GDIR && wget https://dl.gogs.io/0.11.91/gogs_0.11.91_linux_amd64.tar.gz
 RUN tar xvfz gogs_0.11.91_linux_amd64.tar.gz
