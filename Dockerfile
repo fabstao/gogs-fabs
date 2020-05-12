@@ -12,6 +12,7 @@ USER gogs
 WORKDIR $GDIR
 RUN cd $GDIR && wget https://dl.gogs.io/0.11.91/gogs_0.11.91_linux_amd64.tar.gz
 RUN tar xvfz gogs_0.11.91_linux_amd64.tar.gz
+RUN mkdir $GDIR/.ssh
 VOLUME $GDIR
 
 ENTRYPOINT ["/home/gogs/gogs/gogs","web"]
